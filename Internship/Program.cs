@@ -55,7 +55,7 @@ namespace Internship
             // 4 array multidimensional 5 x 5
             // Replace the repeated even numbers for 0, odds for -1
 
-            int[,] numbers = new int[5,5]
+            /* int[,] numbers = new int[5,5]
             {
                 { 42, 20, 55, 19, 15 },
                 { 42, 21, 55, 18, 14 },
@@ -71,26 +71,30 @@ namespace Internship
                     if (numbers[linha, coluna] % 2 == 0) numbers[linha, coluna] = 0;
                     else numbers[linha, coluna] = -1;
                 }
-            }
+            } */
 
             // 5 Ask the size of the array, than ask the int numbers           
             // If the numbers are divisible for 3 write "Fizz"
             // If the numbers are divisible for 5 write "Buzz"
             // If the numbers are divisible for 3 and 5 write "FizzBuzz"
-
-            var array = new Array[];
-
+       
             Console.WriteLine("Informe o tamanho do array: ");
             var arraySize = Int32.Parse(Console.ReadLine());
+            
+            var array = new int[arraySize];
 
-            for (index = 1; index < arraySize; input++)
+            Console.WriteLine("\n");
+
+            for (var index = 0; index < arraySize; index++)
             {
-                Console.WriteLine($"Informe o {index}º número do array");
+                Console.WriteLine($"Informe o {index + 1}º número do array");
                 var numberInformed = Int32.Parse(Console.ReadLine());
                 array[index] = numberInformed;
             }
 
-            for (int index = 1; index < arraySize; index++)
+            Console.WriteLine("\n");
+            
+            for (var index = 1; index < arraySize; index++)
             {
                 if (array[index] % 3 == 0) Console.WriteLine("Fizz");
                 if (array[index] % 5 == 0) Console.WriteLine("Buzz");
