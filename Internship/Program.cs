@@ -93,8 +93,8 @@ namespace Internship
             }
 
             Console.WriteLine("\n");
-            
-            for (var index = 1; index < arraySize; index++)
+
+            for (var index = 0; index < arraySize; index++)
             {
                 if (array[index] % 3 == 0) Console.WriteLine("Fizz");
                 if (array[index] % 5 == 0) Console.WriteLine("Buzz");
