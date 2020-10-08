@@ -17,8 +17,12 @@ namespace Internship
             two = one - two; // 54
             one -= two; // 23
 
+            Console.WriteLine("\n");
+
             Console.WriteLine($"The final value of the variable one is: {one}");
             Console.WriteLine($"The final value of the variable two is: {two}");
+
+            Console.WriteLine("\n");
 
             // 2 Change the value of two variables
             // Don't use a third one, don't change it implicitly
@@ -33,6 +37,8 @@ namespace Internship
 
             Console.WriteLine($"The final value of the variable three is: {three}");
             Console.WriteLine($"The final value of the variable four is: {four}");
+
+            Console.WriteLine("\n");
 
             // 3 Ask for a string and return it backwards
             // Replace the empty spaces " " for underline _
@@ -51,6 +57,8 @@ namespace Internship
             }
 
             Console.WriteLine(answer);
+
+            Console.WriteLine("\n");
 
             // 4 array multidimensional 5 x 5
             // Replace the repeated even numbers for 0, odds for -1
@@ -96,9 +104,9 @@ namespace Internship
 
             for (var index = 0; index < arraySize; index++)
             {
-                if (array[index] % 3 == 0) Console.WriteLine("Fizz");
-                if (array[index] % 5 == 0) Console.WriteLine("Buzz");
-                if ((array[index] % 3 == 0) & (array[index] % 5 == 0)) Console.WriteLine("FizzBuzz");
+                if (array[index] % 3 == 0) Console.WriteLine("Divided by 3: Fizz");
+                if (array[index] % 5 == 0) Console.WriteLine("Divided by 5: Buzz");
+                if ((array[index] % 3 == 0) & (array[index] % 5 == 0)) Console.WriteLine("Divided by 3 and 5: FizzBuzz");
             }
 
         }
