@@ -53,6 +53,7 @@ namespace Internship
             Console.WriteLine(answer);
 
             // 4 array multidimensional 5 x 5
+            // Replace the repeated even numbers for 0, odds for -1
 
             int[,] numbers = new int[5,5]
             {
@@ -72,12 +73,29 @@ namespace Internship
                 }
             }
 
-            // Replace the repeated even numbers for 0, odds for -1
-
-            // 5 Ask the size of the array, than ask the int numbers
+            // 5 Ask the size of the array, than ask the int numbers           
             // If the numbers are divisible for 3 write "Fizz"
             // If the numbers are divisible for 5 write "Buzz"
             // If the numbers are divisible for 3 and 5 write "FizzBuzz"
+
+            var array = new Array[];
+
+            Console.WriteLine("Informe o tamanho do array: ");
+            var arraySize = Int32.Parse(Console.ReadLine());
+
+            for (index = 1; index < arraySize; input++)
+            {
+                Console.WriteLine($"Informe o {index}º número do array");
+                var numberInformed = Int32.Parse(Console.ReadLine());
+                array[index] = numberInformed;
+            }
+
+            for (int index = 1; index < arraySize; index++)
+            {
+                if (array[index] % 3 == 0) Console.WriteLine("Fizz");
+                if (array[index] % 5 == 0) Console.WriteLine("Buzz");
+                if ((array[index] % 3 == 0) & (array[index] % 5 == 0)) Console.WriteLine("FizzBuzz");
+            }
 
         }
     }
